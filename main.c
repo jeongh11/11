@@ -1,20 +1,10 @@
 #include <stdio.h>
 
-int main(void) {
-    int i = 10;
-    char c = 'a';
+void main(void) {
+    int i = 300; //300으로 변경해서도 해보기
 
-    int *iptr;     
-    iptr = &i;     
+    int *pi = &i;
+    char *pc = (char *)&i;
 
-    char *cptr;     
-    cptr = &c;    
-
-    int *iptr2;     
-    iptr2 = iptr;  
-
-   printf(“i : %p\n%p (size:%i)\n”, iptr, &i, sizeof(iptr));
-   printf(“c : %p\n%p (size:%i)\n”, cptr, &c, sizeof(cptr));
-   printf(“iptr2 : %p, %i\n”, iptr2, *iptr2);
-   return 0;
+    printf("%i, %i, %i\n", i, *pi, *pc);
 }
